@@ -1,0 +1,5 @@
+f = @(u) 1/(1-2*u+u.^2);
+f()
+conve = pi/2;
+I = compGaussQuad(f,0,1,4,2)
+abs(conve - I) <= 1e-8
